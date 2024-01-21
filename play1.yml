@@ -1,0 +1,29 @@
+---
+- hosts: all
+  become: true
+  gather_facts: yes
+  ignore_errors: true
+  vars:
+   user_name: Kouadio225
+   group_name: devops
+  vars_files:
+   - variables.yml
+
+  tasks:
+    - name: Check the time
+      command: dateshd
+
+    - name: Create user Kouadio
+      user:
+        name: "{{ user_name}}"
+        comment: Kouadio Admin
+
+    - name: Create group
+      group:
+        name: "{{ group_name}}"
+        state: present
+
+    - name: Install package
+      package:
+        name: vim
+        state: present
