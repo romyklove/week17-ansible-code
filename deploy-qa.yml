@@ -1,0 +1,27 @@
+---
+- name: Deploy Spring Boot App on QA Server
+  hosts: your_qa_servers
+  become: yes  # Run tasks with sudo
+
+  tasks:
+    - name: Delete old artifact
+      shell: rm -rf /opt/qa/spg/*.jar
+      become_user: root
+
+    - name: Check if app is running on port 8082 and kill the process
+      shell: "lsof -i :8082 | awk 'NR>1 {print $2}' | xargs kill -9"
+      become_user: root
+      ignore_errors: yes  # Ignore errors if no process is running on port 8082
+
+    - name: Download new artifact from Nexus
+      get_url:
+        url: "http://198.58.119.40:8081/repository/prof-repo/bioMedical-latest.jar"  # Update the version or use the latest
+        dest: "/opt/qa/spg/bioMedical-latest.jar"
+        force: yes
+        username: admin
+        password: devops
+      become_user: root
+
+    - name: Bring up the app in the background
+      shell: "nohup java -jar /opt/qa/spg/*.jar > /opt/qa/spg.log 2>&1 &"
+      become_user: root

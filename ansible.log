@@ -1,0 +1,38 @@
+2024-01-27 19:01:37,602 p=7291 u=ec2-user n=ansible | Starting galaxy role install process
+2024-01-27 19:01:37,698 p=7291 u=ec2-user n=ansible | - downloading role 'java', owned by geerlingguy
+2024-01-27 19:01:38,001 p=7291 u=ec2-user n=ansible | - downloading role from https://github.com/geerlingguy/ansible-role-java/archive/2.3.2.tar.gz
+2024-01-27 19:01:38,154 p=7291 u=ec2-user n=ansible | - extracting geerlingguy.java to /home/ec2-user/ansible1.dev/roles/geerlingguy.java
+2024-01-27 19:01:38,160 p=7291 u=ec2-user n=ansible | - geerlingguy.java (2.3.2) was installed successfully
+2024-01-27 19:04:24,173 p=7468 u=ec2-user n=ansible | PLAY [db] *********************************************************************************************************************
+2024-01-27 19:04:24,186 p=7468 u=ec2-user n=ansible | TASK [Gathering Facts] ********************************************************************************************************
+2024-01-27 19:04:25,633 p=7468 u=ec2-user n=ansible | ok: [172.31.45.144]
+2024-01-27 19:04:25,645 p=7468 u=ec2-user n=ansible | TASK [apache : Install httpd] *************************************************************************************************
+2024-01-27 19:04:27,072 p=7468 u=ec2-user n=ansible | ok: [172.31.45.144]
+2024-01-27 19:04:27,079 p=7468 u=ec2-user n=ansible | TASK [apache : Start the httpd Daemon] ****************************************************************************************
+2024-01-27 19:04:27,933 p=7468 u=ec2-user n=ansible | ok: [172.31.45.144]
+2024-01-27 19:04:27,943 p=7468 u=ec2-user n=ansible | TASK [apache : Copy index file to target] *************************************************************************************
+2024-01-27 19:04:28,866 p=7468 u=ec2-user n=ansible | ok: [172.31.45.144]
+2024-01-27 19:04:28,884 p=7468 u=ec2-user n=ansible | TASK [system : Update the system] *********************************************************************************************
+2024-01-27 19:04:31,610 p=7468 u=ec2-user n=ansible | ok: [172.31.45.144]
+2024-01-27 19:04:31,628 p=7468 u=ec2-user n=ansible | TASK [java : Include OS-specific variables for Fedora or FreeBSD.] ************************************************************
+2024-01-27 19:04:31,644 p=7468 u=ec2-user n=ansible | skipping: [172.31.45.144]
+2024-01-27 19:04:31,652 p=7468 u=ec2-user n=ansible | TASK [java : Include version-specific variables for CentOS/RHEL.] *************************************************************
+2024-01-27 19:04:31,674 p=7468 u=ec2-user n=ansible | ok: [172.31.45.144]
+2024-01-27 19:04:31,685 p=7468 u=ec2-user n=ansible | TASK [java : Include version-specific variables for Ubuntu.] ******************************************************************
+2024-01-27 19:04:31,700 p=7468 u=ec2-user n=ansible | skipping: [172.31.45.144]
+2024-01-27 19:04:31,707 p=7468 u=ec2-user n=ansible | TASK [java : Include version-specific variables for Debian.] ******************************************************************
+2024-01-27 19:04:31,723 p=7468 u=ec2-user n=ansible | skipping: [172.31.45.144]
+2024-01-27 19:04:31,742 p=7468 u=ec2-user n=ansible | TASK [java : Define java_packages.] *******************************************************************************************
+2024-01-27 19:04:31,829 p=7468 u=ec2-user n=ansible | ok: [172.31.45.144]
+2024-01-27 19:04:31,838 p=7468 u=ec2-user n=ansible | TASK [java : include_tasks] ***************************************************************************************************
+2024-01-27 19:04:31,867 p=7468 u=ec2-user n=ansible | included: /home/ec2-user/ansible1.dev/roles/java/tasks/setup-RedHat.yml for 172.31.45.144
+2024-01-27 19:04:31,876 p=7468 u=ec2-user n=ansible | TASK [java : Ensure Java is installed.] ***************************************************************************************
+2024-01-27 19:05:07,387 p=7468 u=ec2-user n=ansible | changed: [172.31.45.144]
+2024-01-27 19:05:07,395 p=7468 u=ec2-user n=ansible | TASK [java : include_tasks] ***************************************************************************************************
+2024-01-27 19:05:07,410 p=7468 u=ec2-user n=ansible | skipping: [172.31.45.144]
+2024-01-27 19:05:07,418 p=7468 u=ec2-user n=ansible | TASK [java : include_tasks] ***************************************************************************************************
+2024-01-27 19:05:07,433 p=7468 u=ec2-user n=ansible | skipping: [172.31.45.144]
+2024-01-27 19:05:07,449 p=7468 u=ec2-user n=ansible | TASK [java : Set JAVA_HOME if configured.] ************************************************************************************
+2024-01-27 19:05:07,473 p=7468 u=ec2-user n=ansible | skipping: [172.31.45.144]
+2024-01-27 19:05:07,493 p=7468 u=ec2-user n=ansible | PLAY RECAP ********************************************************************************************************************
+2024-01-27 19:05:07,494 p=7468 u=ec2-user n=ansible | 172.31.45.144              : ok=9    changed=1    unreachable=0    failed=0    skipped=6    rescued=0    ignored=0   
