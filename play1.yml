@@ -11,7 +11,7 @@
 
   tasks:
     - name: Check the time
-      command: dateshd
+      command: date
 
     - name: Create user Kouadio
       user:
