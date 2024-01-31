@@ -1,6 +1,6 @@
 ---
 - hosts: db
-  become: yes
+  become: true
   gather_facts: false
   tasks:
     - name: Update the system
@@ -21,9 +21,12 @@
       systemd:
         name: httpd
         state: started
-        enabled: yes
+        enabled: true
       tags:
         - daemon
+    - name: Change directory to the html directory
+      shell:
+        cmd: cd /var/www/html
 
     - name: Copy index file to target
       copy:

@@ -36,3 +36,772 @@
 2024-01-27 19:05:07,473 p=7468 u=ec2-user n=ansible | skipping: [172.31.45.144]
 2024-01-27 19:05:07,493 p=7468 u=ec2-user n=ansible | PLAY RECAP ********************************************************************************************************************
 2024-01-27 19:05:07,494 p=7468 u=ec2-user n=ansible | 172.31.45.144              : ok=9    changed=1    unreachable=0    failed=0    skipped=6    rescued=0    ignored=0   
+2024-01-28 04:46:37,450 p=4862 u=ec2-user n=ansible | PLAY [db] ******************************************************************************************************************************
+2024-01-28 04:46:37,567 p=4862 u=ec2-user n=ansible | TASK [Update the system] ***************************************************************************************************************
+2024-01-28 04:46:57,292 p=4862 u=ec2-user n=ansible | ok: [172.31.45.144]
+2024-01-28 04:46:57,296 p=4862 u=ec2-user n=ansible | TASK [Install httpd] *******************************************************************************************************************
+2024-01-28 04:46:58,918 p=4862 u=ec2-user n=ansible | ok: [172.31.45.144]
+2024-01-28 04:46:58,923 p=4862 u=ec2-user n=ansible | TASK [Start the httpd Daemon] **********************************************************************************************************
+2024-01-28 04:46:59,815 p=4862 u=ec2-user n=ansible | ok: [172.31.45.144]
+2024-01-28 04:46:59,822 p=4862 u=ec2-user n=ansible | TASK [Copy index file to target] *******************************************************************************************************
+2024-01-28 04:46:59,932 p=4862 u=ec2-user n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: If you are using a module and expect the file to exist on the remote, see the remote_src option
+2024-01-28 04:46:59,932 p=4862 u=ec2-user n=ansible | fatal: [172.31.45.144]: FAILED! => {"changed": false, "msg": "Could not find or access 'index.html'\nSearched in:\n\t/home/ec2-user/ansible1.dev/files/index.html\n\t/home/ec2-user/ansible1.dev/index.html\n\t/home/ec2-user/ansible1.dev/files/index.html\n\t/home/ec2-user/ansible1.dev/index.html on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2024-01-28 04:46:59,934 p=4862 u=ec2-user n=ansible | PLAY RECAP *****************************************************************************************************************************
+2024-01-28 04:46:59,934 p=4862 u=ec2-user n=ansible | 172.31.45.144              : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-01-28 04:51:05,020 p=5084 u=ec2-user n=ansible | PLAY [db] ******************************************************************************************************************************
+2024-01-28 04:51:05,032 p=5084 u=ec2-user n=ansible | TASK [Update the system] ***************************************************************************************************************
+2024-01-28 04:51:09,000 p=5084 u=ec2-user n=ansible | ok: [172.31.45.144]
+2024-01-28 04:51:09,004 p=5084 u=ec2-user n=ansible | TASK [Install httpd] *******************************************************************************************************************
+2024-01-28 04:51:10,690 p=5084 u=ec2-user n=ansible | ok: [172.31.45.144]
+2024-01-28 04:51:10,694 p=5084 u=ec2-user n=ansible | TASK [Start the httpd Daemon] **********************************************************************************************************
+2024-01-28 04:51:11,552 p=5084 u=ec2-user n=ansible | ok: [172.31.45.144]
+2024-01-28 04:51:11,557 p=5084 u=ec2-user n=ansible | TASK [Copy index file to target] *******************************************************************************************************
+2024-01-28 04:51:11,642 p=5084 u=ec2-user n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: If you are using a module and expect the file to exist on the remote, see the remote_src option
+2024-01-28 04:51:11,643 p=5084 u=ec2-user n=ansible | fatal: [172.31.45.144]: FAILED! => {"changed": false, "msg": "Could not find or access 'index.html'\nSearched in:\n\t/home/ec2-user/ansible1.dev/files/index.html\n\t/home/ec2-user/ansible1.dev/index.html\n\t/home/ec2-user/ansible1.dev/files/index.html\n\t/home/ec2-user/ansible1.dev/index.html on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2024-01-28 04:51:11,644 p=5084 u=ec2-user n=ansible | PLAY RECAP *****************************************************************************************************************************
+2024-01-28 04:51:11,644 p=5084 u=ec2-user n=ansible | 172.31.45.144              : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-01-28 04:55:52,338 p=5252 u=ec2-user n=ansible | ansible-playbook [core 2.13.13]
+  config file = /home/ec2-user/ansible1.dev/ansible.cfg
+  configured module search path = ['/home/ec2-user/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/local/lib/python3.8/site-packages/ansible
+  ansible collection location = /home/ec2-user/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/local/bin/ansible-playbook
+  python version = 3.8.16 (default, Aug 30 2023, 23:19:34) [GCC 7.3.1 20180712 (Red Hat 7.3.1-15)]
+  jinja version = 3.1.3
+  libyaml = True
+2024-01-28 04:55:52,338 p=5252 u=ec2-user n=ansible | Using /home/ec2-user/ansible1.dev/ansible.cfg as config file
+2024-01-28 04:55:52,339 p=5252 u=ec2-user n=ansible | ERROR! the playbook: your_playbook.yml could not be found
+2024-01-28 04:56:22,426 p=5346 u=ec2-user n=ansible | ansible-playbook [core 2.13.13]
+  config file = /home/ec2-user/ansible1.dev/ansible.cfg
+  configured module search path = ['/home/ec2-user/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/local/lib/python3.8/site-packages/ansible
+  ansible collection location = /home/ec2-user/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/local/bin/ansible-playbook
+  python version = 3.8.16 (default, Aug 30 2023, 23:19:34) [GCC 7.3.1 20180712 (Red Hat 7.3.1-15)]
+  jinja version = 3.1.3
+  libyaml = True
+2024-01-28 04:56:22,426 p=5346 u=ec2-user n=ansible | Using /home/ec2-user/ansible1.dev/ansible.cfg as config file
+2024-01-28 04:56:22,433 p=5346 u=ec2-user n=ansible | host_list declined parsing /home/ec2-user/ansible1.dev/inventory.yml as it did not pass its verify_file() method
+2024-01-28 04:56:22,433 p=5346 u=ec2-user n=ansible | script declined parsing /home/ec2-user/ansible1.dev/inventory.yml as it did not pass its verify_file() method
+2024-01-28 04:56:22,437 p=5346 u=ec2-user n=ansible | Parsed /home/ec2-user/ansible1.dev/inventory.yml inventory source with ini plugin
+2024-01-28 04:56:22,546 p=5346 u=ec2-user n=ansible | Skipping callback 'default', as we already have a stdout callback.
+2024-01-28 04:56:22,546 p=5346 u=ec2-user n=ansible | Skipping callback 'minimal', as we already have a stdout callback.
+2024-01-28 04:56:22,547 p=5346 u=ec2-user n=ansible | Skipping callback 'oneline', as we already have a stdout callback.
+2024-01-28 04:56:22,547 p=5346 u=ec2-user n=ansible | PLAYBOOK: apache.yml *******************************************************************************************************************
+2024-01-28 04:56:22,547 p=5346 u=ec2-user n=ansible | 1 plays in apache.yml
+2024-01-28 04:56:22,549 p=5346 u=ec2-user n=ansible | PLAY [db] ******************************************************************************************************************************
+2024-01-28 04:56:22,558 p=5346 u=ec2-user n=ansible | META: ran handlers
+2024-01-28 04:56:22,561 p=5346 u=ec2-user n=ansible | TASK [Update the system] ***************************************************************************************************************
+2024-01-28 04:56:22,576 p=5351 u=ec2-user n=ansible | <172.31.45.144> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+2024-01-28 04:56:22,577 p=5351 u=ec2-user n=ansible | <172.31.45.144> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/ansible-key.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="ec2-user"' -o ConnectTimeout=10 -o 'ControlPath="/home/ec2-user/.ansible/cp/d876627de0"' 172.31.45.144 '/bin/sh -c '"'"'echo ~ec2-user && sleep 0'"'"''
+2024-01-28 04:56:22,758 p=5351 u=ec2-user n=ansible | <172.31.45.144> (0, b'/home/ec2-user\n', b'')
+2024-01-28 04:56:22,759 p=5351 u=ec2-user n=ansible | <172.31.45.144> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+2024-01-28 04:56:22,760 p=5351 u=ec2-user n=ansible | <172.31.45.144> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/ansible-key.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="ec2-user"' -o ConnectTimeout=10 -o 'ControlPath="/home/ec2-user/.ansible/cp/d876627de0"' 172.31.45.144 '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /home/ec2-user/.ansible/tmp `"&& mkdir "` echo /home/ec2-user/.ansible/tmp/ansible-tmp-1706417782.7594795-5351-15270632953901 `" && echo ansible-tmp-1706417782.7594795-5351-15270632953901="` echo /home/ec2-user/.ansible/tmp/ansible-tmp-1706417782.7594795-5351-15270632953901 `" ) && sleep 0'"'"''
+2024-01-28 04:56:22,785 p=5351 u=ec2-user n=ansible | <172.31.45.144> (0, b'ansible-tmp-1706417782.7594795-5351-15270632953901=/home/ec2-user/.ansible/tmp/ansible-tmp-1706417782.7594795-5351-15270632953901\n', b'')
+2024-01-28 04:56:23,096 p=5351 u=ec2-user n=ansible | <172.31.45.144> Attempting python interpreter discovery
+2024-01-28 04:56:23,097 p=5351 u=ec2-user n=ansible | <172.31.45.144> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+2024-01-28 04:56:23,098 p=5351 u=ec2-user n=ansible | <172.31.45.144> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/ansible-key.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="ec2-user"' -o ConnectTimeout=10 -o 'ControlPath="/home/ec2-user/.ansible/cp/d876627de0"' 172.31.45.144 '/bin/sh -c '"'"'echo PLATFORM; uname; echo FOUND; command -v '"'"'"'"'"'"'"'"'python3.10'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.9'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.8'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.7'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.6'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.5'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'/usr/bin/python3'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'/usr/libexec/platform-python'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python2.7'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'/usr/bin/python'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python'"'"'"'"'"'"'"'"'; echo ENDFOUND && sleep 0'"'"''
+2024-01-28 04:56:23,119 p=5351 u=ec2-user n=ansible | <172.31.45.144> (0, b'PLATFORM\nLinux\nFOUND\n/usr/bin/python3.7\n/usr/bin/python3\n/usr/bin/python2.7\n/usr/bin/python\n/usr/bin/python\nENDFOUND\n', b'')
+2024-01-28 04:56:23,121 p=5351 u=ec2-user n=ansible | <172.31.45.144> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+2024-01-28 04:56:23,122 p=5351 u=ec2-user n=ansible | <172.31.45.144> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/ansible-key.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="ec2-user"' -o ConnectTimeout=10 -o 'ControlPath="/home/ec2-user/.ansible/cp/d876627de0"' 172.31.45.144 '/bin/sh -c '"'"'/usr/bin/python3.7 && sleep 0'"'"''
+2024-01-28 04:56:23,193 p=5351 u=ec2-user n=ansible | <172.31.45.144> (0, b'{"platform_dist_result": ["", "", ""], "osrelease_content": "NAME=\\"Amazon Linux\\"\\nVERSION=\\"2\\"\\nID=\\"amzn\\"\\nID_LIKE=\\"centos rhel fedora\\"\\nVERSION_ID=\\"2\\"\\nPRETTY_NAME=\\"Amazon Linux 2\\"\\nANSI_COLOR=\\"0;33\\"\\nCPE_NAME=\\"cpe:2.3:o:amazon:amazon_linux:2\\"\\nHOME_URL=\\"https://amazonlinux.com/\\"\\nSUPPORT_END=\\"2025-06-30\\"\\n"}\n', b'<stdin>:29: DeprecationWarning: dist() and linux_distribution() functions are deprecated in Python 3.5\n')
+2024-01-28 04:56:23,195 p=5351 u=ec2-user n=ansible | <172.31.45.144> Python interpreter discovery fallback (unsupported Linux distribution: amzn)
+2024-01-28 04:56:23,198 p=5351 u=ec2-user n=ansible | Using module file /usr/local/lib/python3.8/site-packages/ansible/modules/setup.py
+2024-01-28 04:56:23,200 p=5351 u=ec2-user n=ansible | <172.31.45.144> PUT /home/ec2-user/.ansible/tmp/ansible-local-5346wqqamaz7/tmp12y9j_qm TO /home/ec2-user/.ansible/tmp/ansible-tmp-1706417782.7594795-5351-15270632953901/AnsiballZ_setup.py
+2024-01-28 04:56:23,205 p=5351 u=ec2-user n=ansible | <172.31.45.144> SSH: EXEC sftp -b - -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/ansible-key.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="ec2-user"' -o ConnectTimeout=10 -o 'ControlPath="/home/ec2-user/.ansible/cp/d876627de0"' '[172.31.45.144]'
+2024-01-28 04:56:23,257 p=5351 u=ec2-user n=ansible | <172.31.45.144> (0, b'sftp> put /home/ec2-user/.ansible/tmp/ansible-local-5346wqqamaz7/tmp12y9j_qm /home/ec2-user/.ansible/tmp/ansible-tmp-1706417782.7594795-5351-15270632953901/AnsiballZ_setup.py\n', b'')
+2024-01-28 04:56:23,257 p=5351 u=ec2-user n=ansible | <172.31.45.144> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+2024-01-28 04:56:23,258 p=5351 u=ec2-user n=ansible | <172.31.45.144> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/ansible-key.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="ec2-user"' -o ConnectTimeout=10 -o 'ControlPath="/home/ec2-user/.ansible/cp/d876627de0"' 172.31.45.144 '/bin/sh -c '"'"'chmod u+x /home/ec2-user/.ansible/tmp/ansible-tmp-1706417782.7594795-5351-15270632953901/ /home/ec2-user/.ansible/tmp/ansible-tmp-1706417782.7594795-5351-15270632953901/AnsiballZ_setup.py && sleep 0'"'"''
+2024-01-28 04:56:23,279 p=5351 u=ec2-user n=ansible | <172.31.45.144> (0, b'', b'')
+2024-01-28 04:56:23,280 p=5351 u=ec2-user n=ansible | <172.31.45.144> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+2024-01-28 04:56:23,281 p=5351 u=ec2-user n=ansible | <172.31.45.144> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/ansible-key.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="ec2-user"' -o ConnectTimeout=10 -o 'ControlPath="/home/ec2-user/.ansible/cp/d876627de0"' -tt 172.31.45.144 '/bin/sh -c '"'"'sudo -H -S -n  -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-xykruntvwfjqgdnoxsbnyuttllomrsez ; /usr/bin/python3.7 /home/ec2-user/.ansible/tmp/ansible-tmp-1706417782.7594795-5351-15270632953901/AnsiballZ_setup.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+2024-01-28 04:56:23,314 p=5351 u=ec2-user n=ansible | Escalation succeeded
+2024-01-28 04:56:23,668 p=5351 u=ec2-user n=ansible | <172.31.45.144> (0, b'\r\n{"ansible_facts": {"ansible_pkg_mgr": "yum"}, "invocation": {"module_args": {"filter": ["ansible_pkg_mgr"], "gather_subset": ["!all"], "gather_timeout": 10, "fact_path": "/etc/ansible/facts.d"}}}\r\n', b'Shared connection to 172.31.45.144 closed.\r\n')
+2024-01-28 04:56:23,879 p=5351 u=ec2-user n=ansible | Using module file /usr/local/lib/python3.8/site-packages/ansible/modules/yum.py
+2024-01-28 04:56:23,879 p=5351 u=ec2-user n=ansible | <172.31.45.144> PUT /home/ec2-user/.ansible/tmp/ansible-local-5346wqqamaz7/tmpzo1_bu_b TO /home/ec2-user/.ansible/tmp/ansible-tmp-1706417782.7594795-5351-15270632953901/AnsiballZ_yum.py
+2024-01-28 04:56:23,880 p=5351 u=ec2-user n=ansible | <172.31.45.144> SSH: EXEC sftp -b - -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/ansible-key.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="ec2-user"' -o ConnectTimeout=10 -o 'ControlPath="/home/ec2-user/.ansible/cp/d876627de0"' '[172.31.45.144]'
+2024-01-28 04:56:23,932 p=5351 u=ec2-user n=ansible | <172.31.45.144> (0, b'sftp> put /home/ec2-user/.ansible/tmp/ansible-local-5346wqqamaz7/tmpzo1_bu_b /home/ec2-user/.ansible/tmp/ansible-tmp-1706417782.7594795-5351-15270632953901/AnsiballZ_yum.py\n', b'')
+2024-01-28 04:56:23,933 p=5351 u=ec2-user n=ansible | <172.31.45.144> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+2024-01-28 04:56:23,934 p=5351 u=ec2-user n=ansible | <172.31.45.144> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/ansible-key.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="ec2-user"' -o ConnectTimeout=10 -o 'ControlPath="/home/ec2-user/.ansible/cp/d876627de0"' 172.31.45.144 '/bin/sh -c '"'"'chmod u+x /home/ec2-user/.ansible/tmp/ansible-tmp-1706417782.7594795-5351-15270632953901/ /home/ec2-user/.ansible/tmp/ansible-tmp-1706417782.7594795-5351-15270632953901/AnsiballZ_yum.py && sleep 0'"'"''
+2024-01-28 04:56:23,957 p=5351 u=ec2-user n=ansible | <172.31.45.144> (0, b'', b'')
+2024-01-28 04:56:23,959 p=5351 u=ec2-user n=ansible | <172.31.45.144> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+2024-01-28 04:56:23,960 p=5351 u=ec2-user n=ansible | <172.31.45.144> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/ansible-key.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="ec2-user"' -o ConnectTimeout=10 -o 'ControlPath="/home/ec2-user/.ansible/cp/d876627de0"' -tt 172.31.45.144 '/bin/sh -c '"'"'sudo -H -S -n  -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-shnvefkgczdrklvaflxysuhsrrpjjszf ; /usr/bin/python3.7 /home/ec2-user/.ansible/tmp/ansible-tmp-1706417782.7594795-5351-15270632953901/AnsiballZ_yum.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+2024-01-28 04:56:23,996 p=5351 u=ec2-user n=ansible | Escalation succeeded
+2024-01-28 04:56:26,691 p=5351 u=ec2-user n=ansible | <172.31.45.144> (0, b'\r\n{"msg": "", "invocation": {"module_args": {"lock_timeout": 30, "update_cache": false, "conf_file": null, "exclude": [], "allow_downgrade": false, "sslverify": true, "disable_gpg_check": false, "disable_excludes": null, "use_backend": "auto", "validate_certs": true, "state": "latest", "disablerepo": [], "skip_broken": false, "releasever": null, "cacheonly": false, "autoremove": false, "download_dir": null, "installroot": "/", "install_weak_deps": true, "name": ["*"], "download_only": false, "bugfix": false, "list": null, "install_repoquery": true, "update_only": false, "disable_plugin": [], "enablerepo": [], "security": false, "enable_plugin": []}}, "changed": false, "results": ["Nothing to do here, all packages are up to date"], "rc": 0}\r\n', b'Shared connection to 172.31.45.144 closed.\r\n')
+2024-01-28 04:56:26,692 p=5351 u=ec2-user n=ansible | <172.31.45.144> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+2024-01-28 04:56:26,693 p=5351 u=ec2-user n=ansible | <172.31.45.144> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/ansible-key.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="ec2-user"' -o ConnectTimeout=10 -o 'ControlPath="/home/ec2-user/.ansible/cp/d876627de0"' 172.31.45.144 '/bin/sh -c '"'"'rm -f -r /home/ec2-user/.ansible/tmp/ansible-tmp-1706417782.7594795-5351-15270632953901/ > /dev/null 2>&1 && sleep 0'"'"''
+2024-01-28 04:56:26,722 p=5351 u=ec2-user n=ansible | <172.31.45.144> (0, b'', b'')
+2024-01-28 04:56:26,726 p=5346 u=ec2-user n=ansible | ok: [172.31.45.144] => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.7"
+    },
+    "changed": false,
+    "invocation": {
+        "module_args": {
+            "allow_downgrade": false,
+            "autoremove": false,
+            "bugfix": false,
+            "cacheonly": false,
+            "conf_file": null,
+            "disable_excludes": null,
+            "disable_gpg_check": false,
+            "disable_plugin": [],
+            "disablerepo": [],
+            "download_dir": null,
+            "download_only": false,
+            "enable_plugin": [],
+            "enablerepo": [],
+            "exclude": [],
+            "install_repoquery": true,
+            "install_weak_deps": true,
+            "installroot": "/",
+            "list": null,
+            "lock_timeout": 30,
+            "name": [
+                "*"
+            ],
+            "releasever": null,
+            "security": false,
+            "skip_broken": false,
+            "sslverify": true,
+            "state": "latest",
+            "update_cache": false,
+            "update_only": false,
+            "use_backend": "auto",
+            "validate_certs": true
+        }
+    },
+    "msg": "",
+    "rc": 0,
+    "results": [
+        "Nothing to do here, all packages are up to date"
+    ]
+}
+2024-01-28 04:56:26,732 p=5346 u=ec2-user n=ansible | TASK [Install httpd] *******************************************************************************************************************
+2024-01-28 04:56:26,746 p=5388 u=ec2-user n=ansible | <172.31.45.144> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+2024-01-28 04:56:26,747 p=5388 u=ec2-user n=ansible | <172.31.45.144> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/ansible-key.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="ec2-user"' -o ConnectTimeout=10 -o 'ControlPath="/home/ec2-user/.ansible/cp/d876627de0"' 172.31.45.144 '/bin/sh -c '"'"'echo ~ec2-user && sleep 0'"'"''
+2024-01-28 04:56:26,770 p=5388 u=ec2-user n=ansible | <172.31.45.144> (0, b'/home/ec2-user\n', b'')
+2024-01-28 04:56:26,770 p=5388 u=ec2-user n=ansible | <172.31.45.144> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+2024-01-28 04:56:26,771 p=5388 u=ec2-user n=ansible | <172.31.45.144> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/ansible-key.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="ec2-user"' -o ConnectTimeout=10 -o 'ControlPath="/home/ec2-user/.ansible/cp/d876627de0"' 172.31.45.144 '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /home/ec2-user/.ansible/tmp `"&& mkdir "` echo /home/ec2-user/.ansible/tmp/ansible-tmp-1706417786.7704895-5388-37555190823628 `" && echo ansible-tmp-1706417786.7704895-5388-37555190823628="` echo /home/ec2-user/.ansible/tmp/ansible-tmp-1706417786.7704895-5388-37555190823628 `" ) && sleep 0'"'"''
+2024-01-28 04:56:26,796 p=5388 u=ec2-user n=ansible | <172.31.45.144> (0, b'ansible-tmp-1706417786.7704895-5388-37555190823628=/home/ec2-user/.ansible/tmp/ansible-tmp-1706417786.7704895-5388-37555190823628\n', b'')
+2024-01-28 04:56:26,799 p=5388 u=ec2-user n=ansible | Using module file /usr/local/lib/python3.8/site-packages/ansible/modules/setup.py
+2024-01-28 04:56:26,800 p=5388 u=ec2-user n=ansible | <172.31.45.144> PUT /home/ec2-user/.ansible/tmp/ansible-local-5346wqqamaz7/tmpm0mtm_0k TO /home/ec2-user/.ansible/tmp/ansible-tmp-1706417786.7704895-5388-37555190823628/AnsiballZ_setup.py
+2024-01-28 04:56:26,801 p=5388 u=ec2-user n=ansible | <172.31.45.144> SSH: EXEC sftp -b - -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/ansible-key.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="ec2-user"' -o ConnectTimeout=10 -o 'ControlPath="/home/ec2-user/.ansible/cp/d876627de0"' '[172.31.45.144]'
+2024-01-28 04:56:26,867 p=5388 u=ec2-user n=ansible | <172.31.45.144> (0, b'sftp> put /home/ec2-user/.ansible/tmp/ansible-local-5346wqqamaz7/tmpm0mtm_0k /home/ec2-user/.ansible/tmp/ansible-tmp-1706417786.7704895-5388-37555190823628/AnsiballZ_setup.py\n', b'')
+2024-01-28 04:56:26,867 p=5388 u=ec2-user n=ansible | <172.31.45.144> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+2024-01-28 04:56:26,868 p=5388 u=ec2-user n=ansible | <172.31.45.144> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/ansible-key.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="ec2-user"' -o ConnectTimeout=10 -o 'ControlPath="/home/ec2-user/.ansible/cp/d876627de0"' 172.31.45.144 '/bin/sh -c '"'"'chmod u+x /home/ec2-user/.ansible/tmp/ansible-tmp-1706417786.7704895-5388-37555190823628/ /home/ec2-user/.ansible/tmp/ansible-tmp-1706417786.7704895-5388-37555190823628/AnsiballZ_setup.py && sleep 0'"'"''
+2024-01-28 04:56:26,894 p=5388 u=ec2-user n=ansible | <172.31.45.144> (0, b'', b'')
+2024-01-28 04:56:26,895 p=5388 u=ec2-user n=ansible | <172.31.45.144> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+2024-01-28 04:56:26,896 p=5388 u=ec2-user n=ansible | <172.31.45.144> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/ansible-key.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="ec2-user"' -o ConnectTimeout=10 -o 'ControlPath="/home/ec2-user/.ansible/cp/d876627de0"' -tt 172.31.45.144 '/bin/sh -c '"'"'sudo -H -S -n  -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-mtwdlbzylmwkucvjmlhaormttqakolae ; /usr/bin/python3.7 /home/ec2-user/.ansible/tmp/ansible-tmp-1706417786.7704895-5388-37555190823628/AnsiballZ_setup.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+2024-01-28 04:56:26,934 p=5388 u=ec2-user n=ansible | Escalation succeeded
+2024-01-28 04:56:27,292 p=5388 u=ec2-user n=ansible | <172.31.45.144> (0, b'\r\n{"ansible_facts": {"ansible_pkg_mgr": "yum"}, "invocation": {"module_args": {"filter": ["ansible_pkg_mgr"], "gather_subset": ["!all"], "gather_timeout": 10, "fact_path": "/etc/ansible/facts.d"}}}\r\n', b'Shared connection to 172.31.45.144 closed.\r\n')
+2024-01-28 04:56:27,294 p=5388 u=ec2-user n=ansible | Using module file /usr/local/lib/python3.8/site-packages/ansible/modules/yum.py
+2024-01-28 04:56:27,295 p=5388 u=ec2-user n=ansible | <172.31.45.144> PUT /home/ec2-user/.ansible/tmp/ansible-local-5346wqqamaz7/tmpe3easbel TO /home/ec2-user/.ansible/tmp/ansible-tmp-1706417786.7704895-5388-37555190823628/AnsiballZ_yum.py
+2024-01-28 04:56:27,295 p=5388 u=ec2-user n=ansible | <172.31.45.144> SSH: EXEC sftp -b - -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/ansible-key.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="ec2-user"' -o ConnectTimeout=10 -o 'ControlPath="/home/ec2-user/.ansible/cp/d876627de0"' '[172.31.45.144]'
+2024-01-28 04:56:27,338 p=5388 u=ec2-user n=ansible | <172.31.45.144> (0, b'sftp> put /home/ec2-user/.ansible/tmp/ansible-local-5346wqqamaz7/tmpe3easbel /home/ec2-user/.ansible/tmp/ansible-tmp-1706417786.7704895-5388-37555190823628/AnsiballZ_yum.py\n', b'')
+2024-01-28 04:56:27,339 p=5388 u=ec2-user n=ansible | <172.31.45.144> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+2024-01-28 04:56:27,341 p=5388 u=ec2-user n=ansible | <172.31.45.144> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/ansible-key.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="ec2-user"' -o ConnectTimeout=10 -o 'ControlPath="/home/ec2-user/.ansible/cp/d876627de0"' 172.31.45.144 '/bin/sh -c '"'"'chmod u+x /home/ec2-user/.ansible/tmp/ansible-tmp-1706417786.7704895-5388-37555190823628/ /home/ec2-user/.ansible/tmp/ansible-tmp-1706417786.7704895-5388-37555190823628/AnsiballZ_yum.py && sleep 0'"'"''
+2024-01-28 04:56:27,364 p=5388 u=ec2-user n=ansible | <172.31.45.144> (0, b'', b'')
+2024-01-28 04:56:27,364 p=5388 u=ec2-user n=ansible | <172.31.45.144> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+2024-01-28 04:56:27,365 p=5388 u=ec2-user n=ansible | <172.31.45.144> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/ansible-key.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="ec2-user"' -o ConnectTimeout=10 -o 'ControlPath="/home/ec2-user/.ansible/cp/d876627de0"' -tt 172.31.45.144 '/bin/sh -c '"'"'sudo -H -S -n  -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-lnqjmceziwrsbugstwselwxpkhoovwhw ; /usr/bin/python3.7 /home/ec2-user/.ansible/tmp/ansible-tmp-1706417786.7704895-5388-37555190823628/AnsiballZ_yum.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+2024-01-28 04:56:27,400 p=5388 u=ec2-user n=ansible | Escalation succeeded
+2024-01-28 04:56:28,500 p=5388 u=ec2-user n=ansible | <172.31.45.144> (0, b'\r\n{"msg": "", "invocation": {"module_args": {"lock_timeout": 30, "update_cache": false, "conf_file": null, "exclude": [], "allow_downgrade": false, "sslverify": true, "disable_gpg_check": false, "disable_excludes": null, "use_backend": "auto", "validate_certs": true, "state": "present", "disablerepo": [], "skip_broken": false, "releasever": null, "cacheonly": false, "autoremove": false, "download_dir": null, "installroot": "/", "install_weak_deps": true, "name": ["httpd"], "download_only": false, "bugfix": false, "list": null, "install_repoquery": true, "update_only": false, "disable_plugin": [], "enablerepo": [], "security": false, "enable_plugin": []}}, "changed": false, "results": ["httpd-2.4.58-1.amzn2.x86_64 providing httpd is already installed"], "rc": 0}\r\n', b'Shared connection to 172.31.45.144 closed.\r\n')
+2024-01-28 04:56:28,501 p=5388 u=ec2-user n=ansible | <172.31.45.144> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+2024-01-28 04:56:28,502 p=5388 u=ec2-user n=ansible | <172.31.45.144> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/ansible-key.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="ec2-user"' -o ConnectTimeout=10 -o 'ControlPath="/home/ec2-user/.ansible/cp/d876627de0"' 172.31.45.144 '/bin/sh -c '"'"'rm -f -r /home/ec2-user/.ansible/tmp/ansible-tmp-1706417786.7704895-5388-37555190823628/ > /dev/null 2>&1 && sleep 0'"'"''
+2024-01-28 04:56:28,525 p=5388 u=ec2-user n=ansible | <172.31.45.144> (0, b'', b'')
+2024-01-28 04:56:28,529 p=5346 u=ec2-user n=ansible | ok: [172.31.45.144] => {
+    "changed": false,
+    "invocation": {
+        "module_args": {
+            "allow_downgrade": false,
+            "autoremove": false,
+            "bugfix": false,
+            "cacheonly": false,
+            "conf_file": null,
+            "disable_excludes": null,
+            "disable_gpg_check": false,
+            "disable_plugin": [],
+            "disablerepo": [],
+            "download_dir": null,
+            "download_only": false,
+            "enable_plugin": [],
+            "enablerepo": [],
+            "exclude": [],
+            "install_repoquery": true,
+            "install_weak_deps": true,
+            "installroot": "/",
+            "list": null,
+            "lock_timeout": 30,
+            "name": [
+                "httpd"
+            ],
+            "releasever": null,
+            "security": false,
+            "skip_broken": false,
+            "sslverify": true,
+            "state": "present",
+            "update_cache": false,
+            "update_only": false,
+            "use_backend": "auto",
+            "validate_certs": true
+        }
+    },
+    "msg": "",
+    "rc": 0,
+    "results": [
+        "httpd-2.4.58-1.amzn2.x86_64 providing httpd is already installed"
+    ]
+}
+2024-01-28 04:56:28,535 p=5346 u=ec2-user n=ansible | TASK [Start the httpd Daemon] **********************************************************************************************************
+2024-01-28 04:56:28,547 p=5410 u=ec2-user n=ansible | <172.31.45.144> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+2024-01-28 04:56:28,548 p=5410 u=ec2-user n=ansible | <172.31.45.144> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/ansible-key.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="ec2-user"' -o ConnectTimeout=10 -o 'ControlPath="/home/ec2-user/.ansible/cp/d876627de0"' 172.31.45.144 '/bin/sh -c '"'"'echo ~ec2-user && sleep 0'"'"''
+2024-01-28 04:56:28,570 p=5410 u=ec2-user n=ansible | <172.31.45.144> (0, b'/home/ec2-user\n', b'')
+2024-01-28 04:56:28,571 p=5410 u=ec2-user n=ansible | <172.31.45.144> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+2024-01-28 04:56:28,577 p=5410 u=ec2-user n=ansible | <172.31.45.144> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/ansible-key.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="ec2-user"' -o ConnectTimeout=10 -o 'ControlPath="/home/ec2-user/.ansible/cp/d876627de0"' 172.31.45.144 '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /home/ec2-user/.ansible/tmp `"&& mkdir "` echo /home/ec2-user/.ansible/tmp/ansible-tmp-1706417788.5705948-5410-243222033140009 `" && echo ansible-tmp-1706417788.5705948-5410-243222033140009="` echo /home/ec2-user/.ansible/tmp/ansible-tmp-1706417788.5705948-5410-243222033140009 `" ) && sleep 0'"'"''
+2024-01-28 04:56:28,602 p=5410 u=ec2-user n=ansible | <172.31.45.144> (0, b'ansible-tmp-1706417788.5705948-5410-243222033140009=/home/ec2-user/.ansible/tmp/ansible-tmp-1706417788.5705948-5410-243222033140009\n', b'')
+2024-01-28 04:56:28,906 p=5410 u=ec2-user n=ansible | Using module file /usr/local/lib/python3.8/site-packages/ansible/modules/systemd.py
+2024-01-28 04:56:28,907 p=5410 u=ec2-user n=ansible | <172.31.45.144> PUT /home/ec2-user/.ansible/tmp/ansible-local-5346wqqamaz7/tmpr3sv6g6j TO /home/ec2-user/.ansible/tmp/ansible-tmp-1706417788.5705948-5410-243222033140009/AnsiballZ_systemd.py
+2024-01-28 04:56:28,908 p=5410 u=ec2-user n=ansible | <172.31.45.144> SSH: EXEC sftp -b - -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/ansible-key.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="ec2-user"' -o ConnectTimeout=10 -o 'ControlPath="/home/ec2-user/.ansible/cp/d876627de0"' '[172.31.45.144]'
+2024-01-28 04:56:28,955 p=5410 u=ec2-user n=ansible | <172.31.45.144> (0, b'sftp> put /home/ec2-user/.ansible/tmp/ansible-local-5346wqqamaz7/tmpr3sv6g6j /home/ec2-user/.ansible/tmp/ansible-tmp-1706417788.5705948-5410-243222033140009/AnsiballZ_systemd.py\n', b'')
+2024-01-28 04:56:28,956 p=5410 u=ec2-user n=ansible | <172.31.45.144> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+2024-01-28 04:56:28,957 p=5410 u=ec2-user n=ansible | <172.31.45.144> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/ansible-key.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="ec2-user"' -o ConnectTimeout=10 -o 'ControlPath="/home/ec2-user/.ansible/cp/d876627de0"' 172.31.45.144 '/bin/sh -c '"'"'chmod u+x /home/ec2-user/.ansible/tmp/ansible-tmp-1706417788.5705948-5410-243222033140009/ /home/ec2-user/.ansible/tmp/ansible-tmp-1706417788.5705948-5410-243222033140009/AnsiballZ_systemd.py && sleep 0'"'"''
+2024-01-28 04:56:28,979 p=5410 u=ec2-user n=ansible | <172.31.45.144> (0, b'', b'')
+2024-01-28 04:56:28,980 p=5410 u=ec2-user n=ansible | <172.31.45.144> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+2024-01-28 04:56:28,981 p=5410 u=ec2-user n=ansible | <172.31.45.144> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/ansible-key.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="ec2-user"' -o ConnectTimeout=10 -o 'ControlPath="/home/ec2-user/.ansible/cp/d876627de0"' -tt 172.31.45.144 '/bin/sh -c '"'"'sudo -H -S -n  -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-kkecoiboavymryonycedtianpxsgvrzq ; /usr/bin/python3.7 /home/ec2-user/.ansible/tmp/ansible-tmp-1706417788.5705948-5410-243222033140009/AnsiballZ_systemd.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+2024-01-28 04:56:29,019 p=5410 u=ec2-user n=ansible | Escalation succeeded
+2024-01-28 04:56:29,321 p=5410 u=ec2-user n=ansible | <172.31.45.144> (0, b'\r\n{"name": "httpd", "changed": false, "status": {"Type": "notify", "Restart": "no", "NotifyAccess": "main", "RestartUSec": "100ms", "TimeoutStartUSec": "1min 30s", "TimeoutStopUSec": "1min 30s", "WatchdogUSec": "0", "WatchdogTimestamp": "Sun 2024-01-28 02:13:22 UTC", "WatchdogTimestampMonotonic": "25863306", "StartLimitInterval": "10000000", "StartLimitBurst": "5", "StartLimitAction": "none", "FailureAction": "none", "PermissionsStartOnly": "no", "RootDirectoryStartOnly": "no", "RemainAfterExit": "no", "GuessMainPID": "yes", "MainPID": "2160", "ControlPID": "0", "FileDescriptorStoreMax": "0", "StatusText": "Total requests: 9; Idle/Busy workers 100/0;Requests/sec: 0.00092; Bytes served/sec:   0 B/sec", "StatusErrno": "0", "Result": "success", "ExecMainStartTimestamp": "Sun 2024-01-28 02:13:19 UTC", "ExecMainStartTimestampMonotonic": "22817116", "ExecMainExitTimestampMonotonic": "0", "ExecMainPID": "2160", "ExecMainCode": "0", "ExecMainStatus": "0", "ExecStart": "{ path=/usr/sbin/httpd ; argv[]=/usr/sbin/httpd $OPTIONS -DFOREGROUND ; ignore_errors=no ; start_time=[Sun 2024-01-28 02:13:19 UTC] ; stop_time=[n/a] ; pid=2160 ; code=(null) ; status=0/0 }", "ExecReload": "{ path=/usr/sbin/httpd ; argv[]=/usr/sbin/httpd $OPTIONS -k graceful ; ignore_errors=no ; start_time=[Sun 2024-01-28 03:19:01 UTC] ; stop_time=[Sun 2024-01-28 03:19:01 UTC] ; pid=26285 ; code=exited ; status=0 }", "Slice": "system.slice", "ControlGroup": "/system.slice/httpd.service", "MemoryCurrent": "18446744073709551615", "TasksCurrent": "18446744073709551615", "Delegate": "no", "CPUAccounting": "no", "CPUShares": "18446744073709551615", "StartupCPUShares": "18446744073709551615", "CPUQuotaPerSecUSec": "infinity", "BlockIOAccounting": "no", "BlockIOWeight": "18446744073709551615", "StartupBlockIOWeight": "18446744073709551615", "MemoryAccounting": "no", "MemoryLimit": "18446744073709551615", "DevicePolicy": "auto", "TasksAccounting": "no", "TasksMax": "18446744073709551615", "Environment": "LANG=C", "UMask": "0022", "LimitCPU": "18446744073709551615", "LimitFSIZE": "18446744073709551615", "LimitDATA": "18446744073709551615", "LimitSTACK": "10485760", "LimitCORE": "18446744073709551615", "LimitRSS": "18446744073709551615", "LimitNOFILE": "65535", "LimitAS": "18446744073709551615", "LimitNPROC": "18446744073709551615", "LimitMEMLOCK": "18446744073709551615", "LimitLOCKS": "18446744073709551615", "LimitSIGPENDING": "30446", "LimitMSGQUEUE": "819200", "LimitNICE": "0", "LimitRTPRIO": "0", "LimitRTTIME": "18446744073709551615", "OOMScoreAdjust": "0", "Nice": "0", "IOScheduling": "0", "CPUSchedulingPolicy": "0", "CPUSchedulingPriority": "0", "TimerSlackNSec": "50000", "CPUSchedulingResetOnFork": "no", "NonBlocking": "no", "StandardInput": "null", "StandardOutput": "journal", "StandardError": "inherit", "TTYReset": "no", "TTYVHangup": "no", "TTYVTDisallocate": "no", "SyslogPriority": "30", "SyslogLevelPrefix": "yes", "SecureBits": "0", "CapabilityBoundingSet": "18446744073709551615", "AmbientCapabilities": "0", "MountFlags": "0", "PrivateTmp": "yes", "PrivateNetwork": "no", "PrivateDevices": "no", "ProtectHome": "no", "ProtectSystem": "no", "SameProcessGroup": "no", "IgnoreSIGPIPE": "yes", "NoNewPrivileges": "no", "SystemCallErrorNumber": "0", "RuntimeDirectoryMode": "0755", "KillMode": "mixed", "KillSignal": "28", "SendSIGKILL": "yes", "SendSIGHUP": "no", "Id": "httpd.service", "Names": "httpd.service", "Requires": "basic.target system.slice -.mount", "Wants": "httpd-init.service", "WantedBy": "multi-user.target", "Conflicts": "shutdown.target", "Before": "shutdown.target multi-user.target", "After": "-.mount tmp.mount httpd-init.service network.target system.slice remote-fs.target systemd-journald.socket basic.target nss-lookup.target", "RequiresMountsFor": "/var/tmp", "Documentation": "man:httpd.service(8)", "Description": "The Apache HTTP Server", "LoadState": "loaded", "ActiveState": "active", "SubState": "running", "FragmentPath": "/usr/lib/systemd/system/httpd.service", "UnitFileState": "enabled", "UnitFilePreset": "disabled", "InactiveExitTimestamp": "Sun 2024-01-28 02:13:19 UTC", "InactiveExitTimestampMonotonic": "22817154", "ActiveEnterTimestamp": "Sun 2024-01-28 02:13:22 UTC", "ActiveEnterTimestampMonotonic": "25863342", "ActiveExitTimestampMonotonic": "0", "InactiveEnterTimestampMonotonic": "0", "CanStart": "yes", "CanStop": "yes", "CanReload": "yes", "CanIsolate": "no", "StopWhenUnneeded": "no", "RefuseManualStart": "no", "RefuseManualStop": "no", "AllowIsolate": "no", "DefaultDependencies": "yes", "OnFailureJobMode": "replace", "IgnoreOnIsolate": "no", "IgnoreOnSnapshot": "no", "NeedDaemonReload": "no", "JobTimeoutUSec": "0", "JobTimeoutAction": "none", "ConditionResult": "yes", "AssertResult": "yes", "ConditionTimestamp": "Sun 2024-01-28 02:13:19 UTC", "ConditionTimestampMonotonic": "22816508", "AssertTimestamp": "Sun 2024-01-28 02:13:19 UTC", "AssertTimestampMonotonic": "22816508", "Transient": "no", "CollectMode": "inactive"}, "enabled": true, "state": "started", "invocation": {"module_args": {"name": "httpd", "state": "started", "enabled": true, "daemon_reload": false, "daemon_reexec": false, "scope": "system", "no_block": false, "force": null, "masked": null}}}\r\n', b'Shared connection to 172.31.45.144 closed.\r\n')
+2024-01-28 04:56:29,323 p=5410 u=ec2-user n=ansible | <172.31.45.144> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+2024-01-28 04:56:29,324 p=5410 u=ec2-user n=ansible | <172.31.45.144> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/ansible-key.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="ec2-user"' -o ConnectTimeout=10 -o 'ControlPath="/home/ec2-user/.ansible/cp/d876627de0"' 172.31.45.144 '/bin/sh -c '"'"'rm -f -r /home/ec2-user/.ansible/tmp/ansible-tmp-1706417788.5705948-5410-243222033140009/ > /dev/null 2>&1 && sleep 0'"'"''
+2024-01-28 04:56:29,360 p=5410 u=ec2-user n=ansible | <172.31.45.144> (0, b'', b'')
+2024-01-28 04:56:29,365 p=5346 u=ec2-user n=ansible | ok: [172.31.45.144] => {
+    "changed": false,
+    "enabled": true,
+    "invocation": {
+        "module_args": {
+            "daemon_reexec": false,
+            "daemon_reload": false,
+            "enabled": true,
+            "force": null,
+            "masked": null,
+            "name": "httpd",
+            "no_block": false,
+            "scope": "system",
+            "state": "started"
+        }
+    },
+    "name": "httpd",
+    "state": "started",
+    "status": {
+        "ActiveEnterTimestamp": "Sun 2024-01-28 02:13:22 UTC",
+        "ActiveEnterTimestampMonotonic": "25863342",
+        "ActiveExitTimestampMonotonic": "0",
+        "ActiveState": "active",
+        "After": "-.mount tmp.mount httpd-init.service network.target system.slice remote-fs.target systemd-journald.socket basic.target nss-lookup.target",
+        "AllowIsolate": "no",
+        "AmbientCapabilities": "0",
+        "AssertResult": "yes",
+        "AssertTimestamp": "Sun 2024-01-28 02:13:19 UTC",
+        "AssertTimestampMonotonic": "22816508",
+        "Before": "shutdown.target multi-user.target",
+        "BlockIOAccounting": "no",
+        "BlockIOWeight": "18446744073709551615",
+        "CPUAccounting": "no",
+        "CPUQuotaPerSecUSec": "infinity",
+        "CPUSchedulingPolicy": "0",
+        "CPUSchedulingPriority": "0",
+        "CPUSchedulingResetOnFork": "no",
+        "CPUShares": "18446744073709551615",
+        "CanIsolate": "no",
+        "CanReload": "yes",
+        "CanStart": "yes",
+        "CanStop": "yes",
+        "CapabilityBoundingSet": "18446744073709551615",
+        "CollectMode": "inactive",
+        "ConditionResult": "yes",
+        "ConditionTimestamp": "Sun 2024-01-28 02:13:19 UTC",
+        "ConditionTimestampMonotonic": "22816508",
+        "Conflicts": "shutdown.target",
+        "ControlGroup": "/system.slice/httpd.service",
+        "ControlPID": "0",
+        "DefaultDependencies": "yes",
+        "Delegate": "no",
+        "Description": "The Apache HTTP Server",
+        "DevicePolicy": "auto",
+        "Documentation": "man:httpd.service(8)",
+        "Environment": "LANG=C",
+        "ExecMainCode": "0",
+        "ExecMainExitTimestampMonotonic": "0",
+        "ExecMainPID": "2160",
+        "ExecMainStartTimestamp": "Sun 2024-01-28 02:13:19 UTC",
+        "ExecMainStartTimestampMonotonic": "22817116",
+        "ExecMainStatus": "0",
+        "ExecReload": "{ path=/usr/sbin/httpd ; argv[]=/usr/sbin/httpd $OPTIONS -k graceful ; ignore_errors=no ; start_time=[Sun 2024-01-28 03:19:01 UTC] ; stop_time=[Sun 2024-01-28 03:19:01 UTC] ; pid=26285 ; code=exited ; status=0 }",
+        "ExecStart": "{ path=/usr/sbin/httpd ; argv[]=/usr/sbin/httpd $OPTIONS -DFOREGROUND ; ignore_errors=no ; start_time=[Sun 2024-01-28 02:13:19 UTC] ; stop_time=[n/a] ; pid=2160 ; code=(null) ; status=0/0 }",
+        "FailureAction": "none",
+        "FileDescriptorStoreMax": "0",
+        "FragmentPath": "/usr/lib/systemd/system/httpd.service",
+        "GuessMainPID": "yes",
+        "IOScheduling": "0",
+        "Id": "httpd.service",
+        "IgnoreOnIsolate": "no",
+        "IgnoreOnSnapshot": "no",
+        "IgnoreSIGPIPE": "yes",
+        "InactiveEnterTimestampMonotonic": "0",
+        "InactiveExitTimestamp": "Sun 2024-01-28 02:13:19 UTC",
+        "InactiveExitTimestampMonotonic": "22817154",
+        "JobTimeoutAction": "none",
+        "JobTimeoutUSec": "0",
+        "KillMode": "mixed",
+        "KillSignal": "28",
+        "LimitAS": "18446744073709551615",
+        "LimitCORE": "18446744073709551615",
+        "LimitCPU": "18446744073709551615",
+        "LimitDATA": "18446744073709551615",
+        "LimitFSIZE": "18446744073709551615",
+        "LimitLOCKS": "18446744073709551615",
+        "LimitMEMLOCK": "18446744073709551615",
+        "LimitMSGQUEUE": "819200",
+        "LimitNICE": "0",
+        "LimitNOFILE": "65535",
+        "LimitNPROC": "18446744073709551615",
+        "LimitRSS": "18446744073709551615",
+        "LimitRTPRIO": "0",
+        "LimitRTTIME": "18446744073709551615",
+        "LimitSIGPENDING": "30446",
+        "LimitSTACK": "10485760",
+        "LoadState": "loaded",
+        "MainPID": "2160",
+        "MemoryAccounting": "no",
+        "MemoryCurrent": "18446744073709551615",
+        "MemoryLimit": "18446744073709551615",
+        "MountFlags": "0",
+        "Names": "httpd.service",
+        "NeedDaemonReload": "no",
+        "Nice": "0",
+        "NoNewPrivileges": "no",
+        "NonBlocking": "no",
+        "NotifyAccess": "main",
+        "OOMScoreAdjust": "0",
+        "OnFailureJobMode": "replace",
+        "PermissionsStartOnly": "no",
+        "PrivateDevices": "no",
+        "PrivateNetwork": "no",
+        "PrivateTmp": "yes",
+        "ProtectHome": "no",
+        "ProtectSystem": "no",
+        "RefuseManualStart": "no",
+        "RefuseManualStop": "no",
+        "RemainAfterExit": "no",
+        "Requires": "basic.target system.slice -.mount",
+        "RequiresMountsFor": "/var/tmp",
+        "Restart": "no",
+        "RestartUSec": "100ms",
+        "Result": "success",
+        "RootDirectoryStartOnly": "no",
+        "RuntimeDirectoryMode": "0755",
+        "SameProcessGroup": "no",
+        "SecureBits": "0",
+        "SendSIGHUP": "no",
+        "SendSIGKILL": "yes",
+        "Slice": "system.slice",
+        "StandardError": "inherit",
+        "StandardInput": "null",
+        "StandardOutput": "journal",
+        "StartLimitAction": "none",
+        "StartLimitBurst": "5",
+        "StartLimitInterval": "10000000",
+        "StartupBlockIOWeight": "18446744073709551615",
+        "StartupCPUShares": "18446744073709551615",
+        "StatusErrno": "0",
+        "StatusText": "Total requests: 9; Idle/Busy workers 100/0;Requests/sec: 0.00092; Bytes served/sec:   0 B/sec",
+        "StopWhenUnneeded": "no",
+        "SubState": "running",
+        "SyslogLevelPrefix": "yes",
+        "SyslogPriority": "30",
+        "SystemCallErrorNumber": "0",
+        "TTYReset": "no",
+        "TTYVHangup": "no",
+        "TTYVTDisallocate": "no",
+        "TasksAccounting": "no",
+        "TasksCurrent": "18446744073709551615",
+        "TasksMax": "18446744073709551615",
+        "TimeoutStartUSec": "1min 30s",
+        "TimeoutStopUSec": "1min 30s",
+        "TimerSlackNSec": "50000",
+        "Transient": "no",
+        "Type": "notify",
+        "UMask": "0022",
+        "UnitFilePreset": "disabled",
+        "UnitFileState": "enabled",
+        "WantedBy": "multi-user.target",
+        "Wants": "httpd-init.service",
+        "WatchdogTimestamp": "Sun 2024-01-28 02:13:22 UTC",
+        "WatchdogTimestampMonotonic": "25863306",
+        "WatchdogUSec": "0"
+    }
+}
+2024-01-28 04:56:29,369 p=5346 u=ec2-user n=ansible | TASK [Copy index file to target] *******************************************************************************************************
+2024-01-28 04:56:29,384 p=5426 u=ec2-user n=ansible | <172.31.45.144> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+2024-01-28 04:56:29,385 p=5426 u=ec2-user n=ansible | <172.31.45.144> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/ansible-key.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="ec2-user"' -o ConnectTimeout=10 -o 'ControlPath="/home/ec2-user/.ansible/cp/d876627de0"' 172.31.45.144 '/bin/sh -c '"'"'echo ~ec2-user && sleep 0'"'"''
+2024-01-28 04:56:29,407 p=5426 u=ec2-user n=ansible | <172.31.45.144> (0, b'/home/ec2-user\n', b'')
+2024-01-28 04:56:29,409 p=5426 u=ec2-user n=ansible | <172.31.45.144> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+2024-01-28 04:56:29,410 p=5426 u=ec2-user n=ansible | <172.31.45.144> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/ansible-key.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="ec2-user"' -o ConnectTimeout=10 -o 'ControlPath="/home/ec2-user/.ansible/cp/d876627de0"' 172.31.45.144 '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /home/ec2-user/.ansible/tmp `"&& mkdir "` echo /home/ec2-user/.ansible/tmp/ansible-tmp-1706417789.4088893-5426-198968867414525 `" && echo ansible-tmp-1706417789.4088893-5426-198968867414525="` echo /home/ec2-user/.ansible/tmp/ansible-tmp-1706417789.4088893-5426-198968867414525 `" ) && sleep 0'"'"''
+2024-01-28 04:56:29,436 p=5426 u=ec2-user n=ansible | <172.31.45.144> (0, b'ansible-tmp-1706417789.4088893-5426-198968867414525=/home/ec2-user/.ansible/tmp/ansible-tmp-1706417789.4088893-5426-198968867414525\n', b'')
+2024-01-28 04:56:29,438 p=5426 u=ec2-user n=ansible | <172.31.45.144> ESTABLISH SSH CONNECTION FOR USER: ec2-user
+2024-01-28 04:56:29,439 p=5426 u=ec2-user n=ansible | <172.31.45.144> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o 'IdentityFile="/home/ec2-user/ansible-key.pem"' -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o 'User="ec2-user"' -o ConnectTimeout=10 -o 'ControlPath="/home/ec2-user/.ansible/cp/d876627de0"' 172.31.45.144 '/bin/sh -c '"'"'rm -f -r /home/ec2-user/.ansible/tmp/ansible-tmp-1706417789.4088893-5426-198968867414525/ > /dev/null 2>&1 && sleep 0'"'"''
+2024-01-28 04:56:29,460 p=5426 u=ec2-user n=ansible | <172.31.45.144> (0, b'', b'')
+2024-01-28 04:56:29,464 p=5346 u=ec2-user n=ansible | The full traceback is:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/ansible/plugins/action/copy.py", line 466, in run
+    source = self._find_needle('files', source)
+  File "/usr/local/lib/python3.8/site-packages/ansible/plugins/action/__init__.py", line 1417, in _find_needle
+    return self._loader.path_dwim_relative_stack(path_stack, dirname, needle)
+  File "/usr/local/lib/python3.8/site-packages/ansible/parsing/dataloader.py", line 341, in path_dwim_relative_stack
+    raise AnsibleFileNotFound(file_name=source, paths=[to_native(p) for p in search])
+ansible.errors.AnsibleFileNotFound: Could not find or access 'index.html'
+Searched in:
+	/home/ec2-user/ansible1.dev/files/index.html
+	/home/ec2-user/ansible1.dev/index.html
+	/home/ec2-user/ansible1.dev/files/index.html
+	/home/ec2-user/ansible1.dev/index.html on the Ansible Controller.
+If you are using a module and expect the file to exist on the remote, see the remote_src option
+
+2024-01-28 04:56:29,465 p=5346 u=ec2-user n=ansible | fatal: [172.31.45.144]: FAILED! => {
+    "changed": false,
+    "invocation": {
+        "dest": "/var/www/html/index.html",
+        "module_args": {
+            "dest": "/var/www/html/index.html",
+            "src": "index.html"
+        },
+        "src": "index.html"
+    },
+    "msg": "Could not find or access 'index.html'\nSearched in:\n\t/home/ec2-user/ansible1.dev/files/index.html\n\t/home/ec2-user/ansible1.dev/index.html\n\t/home/ec2-user/ansible1.dev/files/index.html\n\t/home/ec2-user/ansible1.dev/index.html on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"
+}
+2024-01-28 04:56:29,467 p=5346 u=ec2-user n=ansible | PLAY RECAP *****************************************************************************************************************************
+2024-01-28 04:56:29,468 p=5346 u=ec2-user n=ansible | 172.31.45.144              : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-01-28 05:42:13,901 p=6089 u=ec2-user n=ansible | PLAY [db] ******************************************************************************************************************************
+2024-01-28 05:42:13,913 p=6089 u=ec2-user n=ansible | TASK [Update the system] ***************************************************************************************************************
+2024-01-28 05:42:17,884 p=6089 u=ec2-user n=ansible | ok: [172.31.45.144]
+2024-01-28 05:42:17,890 p=6089 u=ec2-user n=ansible | TASK [Install httpd] *******************************************************************************************************************
+2024-01-28 05:42:19,547 p=6089 u=ec2-user n=ansible | ok: [172.31.45.144]
+2024-01-28 05:42:19,551 p=6089 u=ec2-user n=ansible | TASK [Start the httpd Daemon] **********************************************************************************************************
+2024-01-28 05:42:20,396 p=6089 u=ec2-user n=ansible | ok: [172.31.45.144]
+2024-01-28 05:42:20,402 p=6089 u=ec2-user n=ansible | TASK [Change directory to the html directory] ******************************************************************************************
+2024-01-28 05:42:20,928 p=6089 u=ec2-user n=ansible | changed: [172.31.45.144]
+2024-01-28 05:42:20,933 p=6089 u=ec2-user n=ansible | TASK [Copy index file to target] *******************************************************************************************************
+2024-01-28 05:42:21,013 p=6089 u=ec2-user n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: If you are using a module and expect the file to exist on the remote, see the remote_src option
+2024-01-28 05:42:21,013 p=6089 u=ec2-user n=ansible | fatal: [172.31.45.144]: FAILED! => {"changed": false, "msg": "Could not find or access 'index.html'\nSearched in:\n\t/home/ec2-user/ansible1.dev/files/index.html\n\t/home/ec2-user/ansible1.dev/index.html\n\t/home/ec2-user/ansible1.dev/files/index.html\n\t/home/ec2-user/ansible1.dev/index.html on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2024-01-28 05:42:21,016 p=6089 u=ec2-user n=ansible | PLAY RECAP *****************************************************************************************************************************
+2024-01-28 05:42:21,016 p=6089 u=ec2-user n=ansible | 172.31.45.144              : ok=4    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-01-28 05:43:19,395 p=6223 u=ec2-user n=ansible | PLAY [db] ******************************************************************************************************************************
+2024-01-28 05:43:19,406 p=6223 u=ec2-user n=ansible | TASK [Update the system] ***************************************************************************************************************
+2024-01-28 05:43:23,343 p=6223 u=ec2-user n=ansible | ok: [172.31.45.144]
+2024-01-28 05:43:23,347 p=6223 u=ec2-user n=ansible | TASK [Install httpd] *******************************************************************************************************************
+2024-01-28 05:43:25,026 p=6223 u=ec2-user n=ansible | ok: [172.31.45.144]
+2024-01-28 05:43:25,030 p=6223 u=ec2-user n=ansible | TASK [Start the httpd Daemon] **********************************************************************************************************
+2024-01-28 05:43:25,881 p=6223 u=ec2-user n=ansible | ok: [172.31.45.144]
+2024-01-28 05:43:25,886 p=6223 u=ec2-user n=ansible | TASK [Change directory to the html directory] ******************************************************************************************
+2024-01-28 05:43:26,406 p=6223 u=ec2-user n=ansible | changed: [172.31.45.144]
+2024-01-28 05:43:26,411 p=6223 u=ec2-user n=ansible | TASK [Copy index file to target] *******************************************************************************************************
+2024-01-28 05:43:26,503 p=6223 u=ec2-user n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: If you are using a module and expect the file to exist on the remote, see the remote_src option
+2024-01-28 05:43:26,503 p=6223 u=ec2-user n=ansible | fatal: [172.31.45.144]: FAILED! => {"changed": false, "msg": "Could not find or access 'index.html'\nSearched in:\n\t/home/ec2-user/ansible1.dev/files/index.html\n\t/home/ec2-user/ansible1.dev/index.html\n\t/home/ec2-user/ansible1.dev/files/index.html\n\t/home/ec2-user/ansible1.dev/index.html on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2024-01-28 05:43:26,505 p=6223 u=ec2-user n=ansible | PLAY RECAP *****************************************************************************************************************************
+2024-01-28 05:43:26,505 p=6223 u=ec2-user n=ansible | 172.31.45.144              : ok=4    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-01-28 19:53:12,468 p=3715 u=ec2-user n=ansible | PLAY [db] ******************************************************************************************************************************
+2024-01-28 19:53:12,609 p=3715 u=ec2-user n=ansible | TASK [Gathering Facts] *****************************************************************************************************************
+2024-01-28 19:53:20,254 p=3715 u=ec2-user n=ansible | ok: [172.31.45.144]
+2024-01-28 19:53:20,267 p=3715 u=ec2-user n=ansible | TASK [apache : Install httpd] **********************************************************************************************************
+2024-01-28 19:53:22,870 p=3715 u=ec2-user n=ansible | ok: [172.31.45.144]
+2024-01-28 19:53:22,878 p=3715 u=ec2-user n=ansible | TASK [apache : Start the httpd Daemon] *************************************************************************************************
+2024-01-28 19:53:23,834 p=3715 u=ec2-user n=ansible | ok: [172.31.45.144]
+2024-01-28 19:53:23,845 p=3715 u=ec2-user n=ansible | TASK [apache : Copy index file to target] **********************************************************************************************
+2024-01-28 19:53:25,029 p=3715 u=ec2-user n=ansible | ok: [172.31.45.144]
+2024-01-28 19:53:25,056 p=3715 u=ec2-user n=ansible | TASK [system : Update the system] ******************************************************************************************************
+2024-01-28 19:53:36,341 p=3715 u=ec2-user n=ansible | ok: [172.31.45.144]
+2024-01-28 19:53:36,359 p=3715 u=ec2-user n=ansible | TASK [java : Include OS-specific variables for Fedora or FreeBSD.] *********************************************************************
+2024-01-28 19:53:36,376 p=3715 u=ec2-user n=ansible | skipping: [172.31.45.144]
+2024-01-28 19:53:36,383 p=3715 u=ec2-user n=ansible | TASK [java : Include version-specific variables for CentOS/RHEL.] **********************************************************************
+2024-01-28 19:53:36,407 p=3715 u=ec2-user n=ansible | ok: [172.31.45.144]
+2024-01-28 19:53:36,413 p=3715 u=ec2-user n=ansible | TASK [java : Include version-specific variables for Ubuntu.] ***************************************************************************
+2024-01-28 19:53:36,427 p=3715 u=ec2-user n=ansible | skipping: [172.31.45.144]
+2024-01-28 19:53:36,448 p=3715 u=ec2-user n=ansible | TASK [java : Include version-specific variables for Debian.] ***************************************************************************
+2024-01-28 19:53:36,481 p=3715 u=ec2-user n=ansible | skipping: [172.31.45.144]
+2024-01-28 19:53:36,491 p=3715 u=ec2-user n=ansible | TASK [java : Define java_packages.] ****************************************************************************************************
+2024-01-28 19:53:36,806 p=3715 u=ec2-user n=ansible | ok: [172.31.45.144]
+2024-01-28 19:53:36,818 p=3715 u=ec2-user n=ansible | TASK [java : include_tasks] ************************************************************************************************************
+2024-01-28 19:53:36,842 p=3715 u=ec2-user n=ansible | included: /home/ec2-user/ansible1.dev/roles/java/tasks/setup-RedHat.yml for 172.31.45.144
+2024-01-28 19:53:36,853 p=3715 u=ec2-user n=ansible | TASK [java : Ensure Java is installed.] ************************************************************************************************
+2024-01-28 19:53:37,994 p=3715 u=ec2-user n=ansible | ok: [172.31.45.144]
+2024-01-28 19:53:38,006 p=3715 u=ec2-user n=ansible | TASK [java : include_tasks] ************************************************************************************************************
+2024-01-28 19:53:38,022 p=3715 u=ec2-user n=ansible | skipping: [172.31.45.144]
+2024-01-28 19:53:38,029 p=3715 u=ec2-user n=ansible | TASK [java : include_tasks] ************************************************************************************************************
+2024-01-28 19:53:38,047 p=3715 u=ec2-user n=ansible | skipping: [172.31.45.144]
+2024-01-28 19:53:38,067 p=3715 u=ec2-user n=ansible | TASK [java : Set JAVA_HOME if configured.] *********************************************************************************************
+2024-01-28 19:53:38,089 p=3715 u=ec2-user n=ansible | skipping: [172.31.45.144]
+2024-01-28 19:53:38,108 p=3715 u=ec2-user n=ansible | PLAY RECAP *****************************************************************************************************************************
+2024-01-28 19:53:38,108 p=3715 u=ec2-user n=ansible | 172.31.45.144              : ok=9    changed=0    unreachable=0    failed=0    skipped=6    rescued=0    ignored=0   
+2024-01-28 21:17:15,555 p=4453 u=ec2-user n=ansible | 172.31.45.144 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.7"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-01-28 21:17:16,090 p=4453 u=ec2-user n=ansible | 172.31.18.4 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-01-28 21:19:45,383 p=4580 u=ec2-user n=ansible | 44.201.169.83 | UNREACHABLE! => {
+    "changed": false,
+    "msg": "Failed to connect to the host via ssh: Warning: Permanently added '44.201.169.83' (ECDSA) to the list of known hosts.\r\nPermission denied (publickey,password,keyboard-interactive).",
+    "unreachable": true
+}
+2024-01-28 21:19:45,923 p=4580 u=ec2-user n=ansible | 172.31.45.144 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.7"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-01-28 21:19:46,218 p=4580 u=ec2-user n=ansible | 172.31.18.4 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-01-28 21:24:06,771 p=4763 u=ec2-user n=ansible | 44.201.169.83 | FAILED! => {
+    "msg": "to use the 'ssh' connection type with passwords or pkcs11_provider, you must install the sshpass program"
+}
+2024-01-28 21:24:07,118 p=4763 u=ec2-user n=ansible | 172.31.45.144 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.7"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-01-28 21:24:07,582 p=4763 u=ec2-user n=ansible | 172.31.18.4 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-01-28 21:33:42,606 p=5428 u=ec2-user n=ansible | [WARNING]:  * Failed to parse /home/ec2-user/ansible1.dev/inventory.yml with auto plugin: We were unable to read either as JSON nor
+YAML, these are the errors we got from each: JSON: Expecting value: line 1 column 2 (char 1)  Syntax Error while loading YAML.   did
+not find expected <document start>  The error appears to be in '/home/ec2-user/ansible1.dev/inventory.yml': line 2, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.  The offending line appears to be:  [db] 172.31.45.144 ^ here
+
+2024-01-28 21:33:42,609 p=5428 u=ec2-user n=ansible | [WARNING]:  * Failed to parse /home/ec2-user/ansible1.dev/inventory.yml with yaml plugin: We were unable to read either as JSON nor
+YAML, these are the errors we got from each: JSON: Expecting value: line 1 column 2 (char 1)  Syntax Error while loading YAML.   did
+not find expected <document start>  The error appears to be in '/home/ec2-user/ansible1.dev/inventory.yml': line 2, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.  The offending line appears to be:  [db] 172.31.45.144 ^ here
+
+2024-01-28 21:33:42,610 p=5428 u=ec2-user n=ansible | [WARNING]:  * Failed to parse /home/ec2-user/ansible1.dev/inventory.yml with ini plugin: /home/ec2-user/ansible1.dev/inventory.yml:22:
+Expected key=value, got: ansible_
+
+2024-01-28 21:33:42,611 p=5428 u=ec2-user n=ansible | [WARNING]: Unable to parse /home/ec2-user/ansible1.dev/inventory.yml as an inventory source
+
+2024-01-28 21:33:42,612 p=5428 u=ec2-user n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2024-01-28 21:34:53,906 p=5478 u=ec2-user n=ansible | 172.31.45.144 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3.7"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-01-28 21:34:53,910 p=5478 u=ec2-user n=ansible | 172.31.18.4 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+2024-01-28 21:34:57,038 p=5478 u=ec2-user n=ansible | 44.201.169.83 | FAILED! => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    },
+    "changed": false,
+    "module_stderr": "Exception calling \"Create\" with \"1\" argument(s): \"At line:4 char:21\r\n+ def _ansiballz_main():\r\n+                     ~\r\nAn expression was expected after '('.\r\nAt line:8 char:19\r\n+         os.getcwd()\r\n+                   ~\r\nAn expression was expected after '('.\r\nAt line:20 char:27\r\n+     except (AttributeError, OSError):\r\n+                           ~\r\nMissing argument in parameter list.\r\nAt line:22 char:29\r\n+     excludes = set(('', '.', scriptdir))\r\n+                             ~\r\nMissing expression after ','.\r\nAt line:22 char:30\r\n+     excludes = set(('', '.', scriptdir))\r\n+                              ~~~~~~~~~\r\nUnexpected token 'scriptdir' in expression or statement.\r\nAt line:22 char:29\r\n+     excludes = set(('', '.', scriptdir))\r\n+                             ~\r\nMissing closing ')' in expression.\r\nAt line:22 char:39\r\n+     excludes = set(('', '.', scriptdir))\r\n+                                       ~\r\nUnexpected token ')' in expression or statement.\r\nAt line:22 char:40\r\n+     excludes = set(('', '.', scriptdir))\r\n+                                        ~\r\nUnexpected token ')' in expression or statement.\r\nAt line:29 char:7\r\n+     if sys.version_info < (3,):\r\n+       ~\r\nMissing '(' after 'if' in if statement.\r\nAt line:29 char:30\r\n+     if sys.version_info < (3,):\r\n+                              ~\r\nMissing expression after ','.\r\nNot all parse errors were reported.  Correct the reported errors and try again.\"\r\nAt line:10 char:1\r\n+ $exec_wrapper = [ScriptBlock]::Create($split_parts[0])\r\n+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\r\n    + FullyQualifiedErrorId : ParseException\r\n \r\nThe expression after '&' in a pipeline element produced an object that was not valid. It must result in a command \r\nname, a script block, or a CommandInfo object.\r\nAt line:11 char:2\r\n+ &$exec_wrapper\r\n+  ~~~~~~~~~~~~~\r\n    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException\r\n    + FullyQualifiedErrorId : BadExpression\r\n ",
+    "module_stdout": "",
+    "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error",
+    "rc": 1
+}
+2024-01-28 21:40:47,529 p=5651 u=ec2-user n=ansible | 44.201.169.83 | FAILED! => {
+    "msg": "The module setuo was not found in configured module paths"
+}
+2024-01-28 21:41:02,403 p=5681 u=ec2-user n=ansible | 44.201.169.83 | SUCCESS => {
+    "ansible_facts": {
+        "ansible_architecture": "64-bit",
+        "ansible_architecture2": "x86_64",
+        "ansible_bios_date": "08/24/2006",
+        "ansible_bios_version": "4.11.amazon",
+        "ansible_date_time": {
+            "date": "2024-01-28",
+            "day": "28",
+            "epoch": "1706478059.82997",
+            "epoch_int": 1706478060,
+            "epoch_local": "1706478059.82997",
+            "hour": "21",
+            "iso8601": "2024-01-28T21:40:59Z",
+            "iso8601_basic": "20240128T214059829969",
+            "iso8601_basic_short": "20240128T214059",
+            "iso8601_micro": "2024-01-28T21:40:59.829969Z",
+            "minute": "40",
+            "month": "01",
+            "second": "59",
+            "time": "21:40:59",
+            "tz": "UTC",
+            "tz_offset": "+00:00",
+            "weekday": "Sunday",
+            "weekday_number": "0",
+            "weeknumber": "4",
+            "year": "2024"
+        },
+        "ansible_distribution": "Microsoft Windows Server 2022 Datacenter",
+        "ansible_distribution_major_version": "10",
+        "ansible_distribution_version": "10.0.20348.0",
+        "ansible_domain": "",
+        "ansible_env": {
+            "ALLUSERSPROFILE": "C:\\ProgramData",
+            "APPDATA": "C:\\Users\\Administrator\\AppData\\Roaming",
+            "AWS_EXECUTION_ENV": "EC2",
+            "COMPUTERNAME": "EC2AMAZ-ROM0NL5",
+            "ComSpec": "C:\\Windows\\system32\\cmd.exe",
+            "CommonProgramFiles": "C:\\Program Files\\Common Files",
+            "CommonProgramFiles(x86)": "C:\\Program Files (x86)\\Common Files",
+            "CommonProgramW6432": "C:\\Program Files\\Common Files",
+            "DriverData": "C:\\Windows\\System32\\Drivers\\DriverData",
+            "EC2LAUNCH_TELEMETRY": "1",
+            "HOME": "C:\\Users\\Administrator",
+            "HOMEDRIVE": "C:",
+            "HOMEPATH": "\\Users\\Administrator",
+            "LOCALAPPDATA": "C:\\Users\\Administrator\\AppData\\Local",
+            "LOGNAME": "administrator",
+            "NUMBER_OF_PROCESSORS": "2",
+            "OS": "Windows_NT",
+            "PATHEXT": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL",
+            "PROCESSOR_ARCHITECTURE": "AMD64",
+            "PROCESSOR_IDENTIFIER": "Intel64 Family 6 Model 79 Stepping 1, GenuineIntel",
+            "PROCESSOR_LEVEL": "6",
+            "PROCESSOR_REVISION": "4f01",
+            "PROMPT": "administrator@EC2AMAZ-ROM0NL5 $P$G",
+            "PSExecutionPolicyPreference": "Unrestricted",
+            "PSModulePath": "C:\\Users\\Administrator\\Documents\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules",
+            "PUBLIC": "C:\\Users\\Public",
+            "Path": "C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Amazon\\cfn-bootstrap\\;C:\\Windows\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;",
+            "ProgramData": "C:\\ProgramData",
+            "ProgramFiles": "C:\\Program Files",
+            "ProgramFiles(x86)": "C:\\Program Files (x86)",
+            "ProgramW6432": "C:\\Program Files",
+            "SHELL": "c:\\windows\\system32\\cmd.exe",
+            "SSH_CLIENT": "23.20.193.241 55470 22",
+            "SSH_CONNECTION": "23.20.193.241 55470 172.31.89.6 22",
+            "SystemDrive": "C:",
+            "SystemRoot": "C:\\Windows",
+            "TEMP": "C:\\Users\\Administrator\\AppData\\Local\\Temp",
+            "TMP": "C:\\Users\\Administrator\\AppData\\Local\\Temp",
+            "USER": "administrator",
+            "USERDOMAIN": "WORKGROUP",
+            "USERNAME": "administrator",
+            "USERPROFILE": "C:\\Users\\Administrator",
+            "c28fc6f98a2c44abbbd89d6a3037d0d9_POSIX_FD_STATE": "AAAAAAICAgA=",
+            "windir": "C:\\Windows"
+        },
+        "ansible_fqdn": "EC2AMAZ-ROM0NL5",
+        "ansible_hostname": "EC2AMAZ-ROM0NL5",
+        "ansible_interfaces": [
+            {
+                "connection_name": "Ethernet 2",
+                "default_gateway": "172.31.80.1",
+                "dns_domain": "ec2.internal",
+                "interface_index": 7,
+                "interface_name": "AWS PV Network Device #0",
+                "ipv4": {
+                    "address": "172.31.89.6",
+                    "prefix": "20"
+                },
+                "ipv6": {
+                    "address": "fe80::37fa:dd14:f396:7ba8%7",
+                    "prefix": "64"
+                },
+                "macaddress": "12:E0:B3:C3:A5:13",
+                "mtu": 9001,
+                "speed": 1000
+            }
+        ],
+        "ansible_ip_addresses": [
+            "fe80::37fa:dd14:f396:7ba8%7",
+            "172.31.89.6"
+        ],
+        "ansible_kernel": "10.0.20348.0",
+        "ansible_lastboot": "2024-01-28 20:18:56Z",
+        "ansible_machine_id": "S-1-5-21-261912528-2924731063-1134257578",
+        "ansible_memfree_mb": 1985,
+        "ansible_memtotal_mb": 4096,
+        "ansible_netbios_name": "EC2AMAZ-ROM0NL5",
+        "ansible_nodename": "EC2AMAZ-ROM0NL5",
+        "ansible_os_family": "Windows",
+        "ansible_os_installation_type": "Server",
+        "ansible_os_name": "Microsoft Windows Server 2022 Datacenter",
+        "ansible_os_product_type": "server",
+        "ansible_owner_contact": "",
+        "ansible_owner_name": "EC2",
+        "ansible_pagefilefree_mb": 1233,
+        "ansible_pagefiletotal_mb": 1408,
+        "ansible_powershell_version": 5,
+        "ansible_processor": [
+            "0",
+            "GenuineIntel",
+            "Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz",
+            "1",
+            "GenuineIntel",
+            "Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz"
+        ],
+        "ansible_processor_cores": 67,
+        "ansible_processor_count": 2,
+        "ansible_processor_threads_per_core": 85,
+        "ansible_processor_vcpus": 2,
+        "ansible_product_name": "HVM domU",
+        "ansible_product_serial": "ec2038fc-a0ee-eeb5-dda9-d43a3daa99c2",
+        "ansible_reboot_pending": true,
+        "ansible_swaptotal_mb": 0,
+        "ansible_system": "Win32NT",
+        "ansible_system_description": "",
+        "ansible_system_vendor": "Xen",
+        "ansible_uptime_seconds": 4926,
+        "ansible_user_dir": "C:\\Users\\Administrator",
+        "ansible_user_gecos": "",
+        "ansible_user_id": "administrator",
+        "ansible_user_sid": "S-1-5-21-261912528-2924731063-1134257578-500",
+        "ansible_virtualization_role": "guest",
+        "ansible_virtualization_type": "xen",
+        "ansible_windows_domain": "WORKGROUP",
+        "ansible_windows_domain_member": false,
+        "ansible_windows_domain_role": "Stand-alone server",
+        "gather_subset": [
+            "all"
+        ],
+        "module_setup": true
+    },
+    "changed": false
+}
+2024-01-28 21:42:47,799 p=5779 u=ec2-user n=ansible | 44.201.169.83 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2024-01-28 21:53:24,874 p=6128 u=ec2-user n=ansible | playbook: windows.yml
+2024-01-28 21:53:33,445 p=6161 u=ec2-user n=ansible | PLAY [wind] ****************************************************************************************************************************
+2024-01-28 21:53:33,469 p=6161 u=ec2-user n=ansible | TASK [Gathering Facts] *****************************************************************************************************************
+2024-01-28 21:53:37,117 p=6161 u=ec2-user n=ansible | ok: [44.201.169.83]
+2024-01-28 21:53:37,125 p=6161 u=ec2-user n=ansible | TASK [Create a directory] **************************************************************************************************************
+2024-01-28 21:53:38,743 p=6161 u=ec2-user n=ansible | changed: [44.201.169.83]
+2024-01-28 21:53:38,754 p=6161 u=ec2-user n=ansible | TASK [Download file from online] *******************************************************************************************************
+2024-01-28 21:53:44,602 p=6161 u=ec2-user n=ansible | changed: [44.201.169.83]
+2024-01-28 21:53:44,612 p=6161 u=ec2-user n=ansible | PLAY RECAP *****************************************************************************************************************************
+2024-01-28 21:53:44,612 p=6161 u=ec2-user n=ansible | 44.201.169.83              : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
