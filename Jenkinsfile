@@ -37,6 +37,7 @@ pipeline {
                     dir('code') {
                         
                         sh 'ansible-playbook -i /home/ec2-user/ansible1.dev/inventory.yml /home/ec2-user/ansible1.dev/cron-job.yml'
+                        sh 'ansible-playbook -i /home/ec2-user/ansible1.dev/inventory.yml /home/ec2-user/ansible1.dev/play1.yml'
                  }
               }
 
