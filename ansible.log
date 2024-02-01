@@ -805,3 +805,40 @@ Expected key=value, got: ansible_
 2024-01-28 21:53:44,602 p=6161 u=ec2-user n=ansible | changed: [44.201.169.83]
 2024-01-28 21:53:44,612 p=6161 u=ec2-user n=ansible | PLAY RECAP *****************************************************************************************************************************
 2024-01-28 21:53:44,612 p=6161 u=ec2-user n=ansible | 44.201.169.83              : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-02-01 15:06:56,928 p=14433 u=ec2-user n=ansible | PLAY [Update Servers] ************************************************************************************************************
+2024-02-01 15:06:56,967 p=14433 u=ec2-user n=ansible | TASK [Gathering Facts] ***********************************************************************************************************
+2024-02-01 15:07:01,067 p=14433 u=ec2-user n=ansible | ok: [172.31.18.4]
+2024-02-01 15:07:03,971 p=14433 u=ec2-user n=ansible | ok: [172.31.45.144]
+2024-02-01 15:07:03,985 p=14433 u=ec2-user n=ansible | TASK [Add monthly cron job for package updates] **********************************************************************************
+2024-02-01 15:07:04,573 p=14433 u=ec2-user n=ansible | changed: [172.31.18.4]
+2024-02-01 15:07:04,610 p=14433 u=ec2-user n=ansible | changed: [172.31.45.144]
+2024-02-01 15:07:04,624 p=14433 u=ec2-user n=ansible | PLAY RECAP ***********************************************************************************************************************
+2024-02-01 15:07:04,624 p=14433 u=ec2-user n=ansible | 172.31.18.4                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-02-01 15:07:04,624 p=14433 u=ec2-user n=ansible | 172.31.45.144              : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-02-01 15:17:02,327 p=18284 u=ec2-user n=ansible | PLAY [Update Servers] ******************************************************************************************************************
+2024-02-01 15:17:02,340 p=18284 u=ec2-user n=ansible | TASK [Add monthly cron job for package updates] ****************************************************************************************
+2024-02-01 15:17:02,361 p=18284 u=ec2-user n=ansible | fatal: [172.31.45.144]: FAILED! => {"msg": "The conditional check 'ansible_os_family == 'RedHat' or ansible_distribution == 'Amazon' or ansible_os_family == 'Debian'' failed. The error was: error while evaluating conditional (ansible_os_family == 'RedHat' or ansible_distribution == 'Amazon' or ansible_os_family == 'Debian'): 'ansible_os_family' is undefined\n\nThe error appears to be in '/home/ec2-user/ansible1.dev/cron-job.yml': line 8, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n  tasks:\n    - name: Add monthly cron job for package updates\n      ^ here\n"}
+2024-02-01 15:17:02,370 p=18284 u=ec2-user n=ansible | fatal: [172.31.18.4]: FAILED! => {"msg": "The conditional check 'ansible_os_family == 'RedHat' or ansible_distribution == 'Amazon' or ansible_os_family == 'Debian'' failed. The error was: error while evaluating conditional (ansible_os_family == 'RedHat' or ansible_distribution == 'Amazon' or ansible_os_family == 'Debian'): 'ansible_os_family' is undefined\n\nThe error appears to be in '/home/ec2-user/ansible1.dev/cron-job.yml': line 8, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n  tasks:\n    - name: Add monthly cron job for package updates\n      ^ here\n"}
+2024-02-01 15:17:02,371 p=18284 u=ec2-user n=ansible | PLAY RECAP *****************************************************************************************************************************
+2024-02-01 15:17:02,372 p=18284 u=ec2-user n=ansible | 172.31.18.4                : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-02-01 15:17:02,372 p=18284 u=ec2-user n=ansible | 172.31.45.144              : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-02-01 15:18:34,959 p=18899 u=ec2-user n=ansible | PLAY [Update Servers] ******************************************************************************************************************
+2024-02-01 15:18:34,970 p=18899 u=ec2-user n=ansible | TASK [Gathering Facts] *****************************************************************************************************************
+2024-02-01 15:18:36,604 p=18899 u=ec2-user n=ansible | ok: [172.31.45.144]
+2024-02-01 15:18:36,634 p=18899 u=ec2-user n=ansible | ok: [172.31.18.4]
+2024-02-01 15:18:36,650 p=18899 u=ec2-user n=ansible | TASK [Add monthly cron job for package updates] ****************************************************************************************
+2024-02-01 15:18:37,220 p=18899 u=ec2-user n=ansible | changed: [172.31.18.4]
+2024-02-01 15:18:37,247 p=18899 u=ec2-user n=ansible | changed: [172.31.45.144]
+2024-02-01 15:18:37,259 p=18899 u=ec2-user n=ansible | PLAY RECAP *****************************************************************************************************************************
+2024-02-01 15:18:37,259 p=18899 u=ec2-user n=ansible | 172.31.18.4                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-02-01 15:18:37,260 p=18899 u=ec2-user n=ansible | 172.31.45.144              : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-02-01 15:36:33,451 p=25526 u=ec2-user n=ansible | PLAY [Update Servers] ******************************************************************************************************************
+2024-02-01 15:36:33,461 p=25526 u=ec2-user n=ansible | TASK [Gathering Facts] *****************************************************************************************************************
+2024-02-01 15:36:35,059 p=25526 u=ec2-user n=ansible | ok: [172.31.45.144]
+2024-02-01 15:36:35,083 p=25526 u=ec2-user n=ansible | ok: [172.31.18.4]
+2024-02-01 15:36:35,097 p=25526 u=ec2-user n=ansible | TASK [Add monthly cron job for package updates] ****************************************************************************************
+2024-02-01 15:36:35,659 p=25526 u=ec2-user n=ansible | changed: [172.31.18.4]
+2024-02-01 15:36:35,660 p=25526 u=ec2-user n=ansible | changed: [172.31.45.144]
+2024-02-01 15:36:35,675 p=25526 u=ec2-user n=ansible | PLAY RECAP *****************************************************************************************************************************
+2024-02-01 15:36:35,675 p=25526 u=ec2-user n=ansible | 172.31.18.4                : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-02-01 15:36:35,675 p=25526 u=ec2-user n=ansible | 172.31.45.144              : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

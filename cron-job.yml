@@ -1,0 +1,17 @@
+---
+- name: Update Servers
+  hosts: all
+  become: true  # Run tasks with sudo (root) privileges
+  gather_facts: true
+
+  tasks:
+    - name: Add monthly cron job for package updates
+      ansible.builtin.cron:
+        name: "Monthly Package Updates"
+        minute: 0
+        hour: 0
+        day: 1
+        month: "*"
+        weekday: "*"
+        job: "yum update -y || apt update -y"
+      when: "ansible_os_family == 'RedHat' or ansible_distribution == 'Amazon' or ansible_os_family == 'Debian'"
