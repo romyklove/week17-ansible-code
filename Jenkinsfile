@@ -8,7 +8,7 @@ pipeline {
               sh 'zip -r code.zip * -x Jenkinsfile' 
 
                // Upload the zip file to JFrog Artifactory
-               sh 'curl -uadmin:AP8FLm7718W6o5MZnPEHVRnaYwx -T code.zip "http://44.211.177.137:8081/artifactory/code/code.zip"'
+               sh 'curl -uadmin:AP8FLm7718W6o5MZnPEHVRnaYwx -T code.zip "http://44.211.207.79:8081/artifactory/code/code.zip"'
             }
            
            }
@@ -20,7 +20,7 @@ pipeline {
          steps {
             script {
                // Download the zip file from Jfrog Artifactory
-             sh 'curl -uadmin:AP8FLm7718W6o5MZnPEHVRnaYwx -O "http://44.211.177.137:8081/artifactory/code/code.zip"'
+             sh 'curl -uadmin:AP8FLm7718W6o5MZnPEHVRnaYwx -O "http://44.211.207.79:8081/artifactory/code/code.zip"'
              // Now you can use the downloaded files on the agent
             }
          }
